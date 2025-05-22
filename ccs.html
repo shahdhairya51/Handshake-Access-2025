@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Access 2025: Complete Insights Dashboard</title>
+  <style>
+    :root {
+      --color-bg: #f3f4f6;
+      --color-card-bg: #ffffff;
+      --color-border: #e5e7eb;
+      --color-primary: #2563eb;
+      --color-secondary: #10b981;
+      --color-accent: #6366f1;
+      --color-pink: #ffe4e6;
+      --color-text: #1f2937;
+      --color-text-muted: #4b5563;
+      --radius: 12px;
+      --shadow-light: 0 4px 16px rgba(0,0,0,0.06);
+      --shadow-strong: 0 8px 32px rgba(0,0,0,0.1);
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Inter',sans-serif; background:var(--color-bg); color:var(--color-text); line-height:1.6; }
+    .container { max-width:1400px; margin:auto; padding:2rem; }
+
+    /* Header */
+    .header { text-align:center; margin-bottom:2rem; padding:2rem; background:var(--color-card-bg); border-radius:var(--radius); box-shadow:var(--shadow-light); border:1px solid var(--color-border); }
+    .header h1 { font-size:3rem; color:var(--color-primary); margin-bottom:0.5rem; }
+    .header .subtitle { color:var(--color-text-muted); font-size:1.2rem; }
+    .conference-info { margin-top:1rem; padding:1rem; background:var(--color-pink); border-radius:var(--radius); color:var(--color-text); font-size:0.95rem; border-left:4px solid var(--color-secondary); }
+
+    /* Grid layouts */
+    .stats-grid, .insights-grid, .action-grid, .benchmark-grid { display:grid; gap:2rem; }
+    .stats-grid { grid-template-columns:repeat(auto-fit,minmax(350px,1fr)); margin-bottom:2rem; }
+    .insights-grid { grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); margin-bottom:2rem; }
+    .action-grid, .benchmark-grid { grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); margin-bottom:2rem; }
+
+    /* Cards & Sections */
+    .section, .key-insights-section, .action-insights, .benchmark-section, .methodology-section { background:var(--color-card-bg); border-radius:var(--radius); padding:2rem; border:1px solid var(--color-border); box-shadow:var(--shadow-light); transition:transform 0.3s ease; }
+    .section:hover, .key-insights-section:hover, .action-insights:hover, .benchmark-section:hover { transform:translateY(-4px); box-shadow:var(--shadow-strong); }
+
+    /* Titles & Icons */
+    .section-title, .key-insights-section h2, .action-insights h2, .benchmark-section h2, .methodology-section h2 { font-size:1.6rem; font-weight:700; color:var(--color-primary); margin-bottom:1rem; display:flex; align-items:center; }
+    .section-icon { font-size:1.5rem; margin-right:0.5rem; }
+
+    /* Stat items */
+    .stat-item { background:var(--color-bg); padding:1.5rem; border-radius:var(--radius); border-left:4px solid var(--color-primary); margin-bottom:1rem; transition:transform 0.3s ease; }
+    .stat-item:hover { transform:translateX(4px); }
+    .stat-number { font-size:2rem; font-weight:800; color:var(--color-text); }
+    .stat-label { font-weight:600; color:var(--color-text); margin:0.5rem 0; }
+    .stat-description { color:var(--color-text-muted); font-size:0.9rem; }
+
+    /* Insight items: uniform white background */
+    .insight-item { background:var(--color-card-bg); padding:2rem; border-radius:var(--radius); border:1px solid var(--color-border); box-shadow:var(--shadow-light); }
+    .insight-item h3 { font-size:1.1rem; color:var(--color-secondary); margin-bottom:0.5rem; }
+    .insight-item p { color:var(--color-text); font-size:0.95rem; }
+
+    /* Action & Benchmark items */
+    .action-item, .benchmark-item { margin-bottom:1rem; background:var(--color-bg); padding:1rem; border-radius:var(--radius); border-left:4px solid var(--color-accent); transition:transform 0.3s ease; }
+    .action-item:hover, .benchmark-item:hover { transform:translateY(-2px); }
+    .action-item h3, .benchmark-item .benchmark-label { font-size:1.1rem; font-weight:600; color:var(--color-text); margin-bottom:0.5rem; }
+    .action-item p, .benchmark-item .benchmark-description { color:var(--color-text-muted); font-size:0.9rem; }
+    .benchmark-item .benchmark-number { font-size:1.8rem; font-weight:800; color:var(--color-primary); margin-bottom:0.3rem; }
+
+    /* Methodology text */
+    .methodology-section p { color:var(--color-text-muted); font-size:0.9rem; margin-bottom:1rem; }
+
+    @media(max-width:768px) { .header h1 { font-size:2rem; } .stats-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>Access 2025 Insights Dashboard</h1>
+      <p class="subtitle">Data-driven insights from Handshake’s premier career center conference</p>
+      <div class="conference-info">
+        <strong>Source:</strong> Aggregated platform metrics, session transcripts, employer & student surveys, and case studies.
+      </div>
+    </div>
+
+    <!-- Key Metrics -->
+    <div class="stats-grid">
+      <!-- Platform Scale & Network Power -->
+      <div class="section">
+        <div class="section-title"><span class="section-icon">🌐</span>Platform Scale & Network Power</div>
+        <div class="stat-item"><span class="stat-number">1M+</span><div class="stat-label">Employers on Handshake</div><div class="stat-description">Largest U.S. early-talent recruiter network, broad industry access.</div></div>
+        <div class="stat-item"><span class="stat-number">18M+</span><div class="stat-label">Active Students & Alumni</div><div class="stat-description">Extensive candidate pool for internships & entry-level roles.</div></div>
+        <div class="stat-item"><span class="stat-number">1,500+</span><div class="stat-label">Partner Schools</div><div class="stat-description">Trusted by career centers nationwide for strategic recruiting.</div></div>
+        <div class="stat-item"><span class="stat-number">35M</span><div class="stat-label">U.S. Small Businesses</div><div class="stat-description">Half of U.S. workforce at SMBs—diverse opportunity pool.</div></div>
+      </div>
+      <!-- Market Dynamics & Competition Reality -->
+      <div class="section">
+        <div class="section-title"><span class="section-icon">📈</span>Market Dynamics & Competition</div>
+        <div class="stat-item"><span class="stat-number">-15%</span><div class="stat-label">Job Posting Decline</div><div class="stat-description">But applications per role ↑30%, signaling intense competition.</div></div>
+        <div class="stat-item"><span class="stat-number">4×</span><div class="stat-label">SMB Application Growth</div><div class="stat-description">Gen Z values SMB roles; applications quadrupled (2022–2025).</div></div>
+        <div class="stat-item"><span class="stat-number">44</span><div class="stat-label">Avg Apps per SMB Job</div><div class="stat-description">Demonstrates Handshake’s reach for smaller employers.</div></div>
+        <div class="stat-item"><span class="stat-number">87%</span><div class="stat-label">SMBs Report Efficiency Gains</div><div class="stat-description">Speed & quality improvements using platform tools.</div></div>
+      </div>
+      <!-- Conversion & ROI Excellence -->
+      <div class="section">
+        <div class="section-title"><span class="section-icon">🎯</span>Conversion & ROI</div>
+        <div class="stat-item"><span class="stat-number">65%</span><div class="stat-label">Intern → Full‑Time Conversion</div><div class="stat-description">Two‑thirds convert at top employers—highest channel ROI.</div></div>
+        <div class="stat-item"><span class="stat-number">69%</span><div class="stat-label">Handshake‑Influenced Hires</div><div class="stat-description">Majority of hires at National Grid trace back to referrals.</div></div>
+        <div class="stat-item"><span class="stat-number">20–30pt</span><div class="stat-label">Retention Lift</div><div class="stat-description">Former interns stay 20–30 pts higher after 1 year.</div></div>
+        <div class="stat-item"><Span class="stat-number">700%</span><div class="stat-label">Collections Application Multiplier</div><div class="stat-description">Jobs in collections draw 7× more applications.</div></div>
+      </div>
+      <!-- Skills & Future Workforce -->
+      <div class="section">
+        <div class="section-title"><span class="section-icon">⚡</span>Skills & Future‑Readiness</div>
+        <div class="stat-item"><span class="stat-number">2.5–5 yrs</span><div class="stat-label">Skills Half‑Life</div><div class="stat-description">Technical skills expire fast; durable skills compound.</div></div>
+        <div class="stat-item"><span class="stat-number">70%</span><div class="stat-label">Jobs Require Degrees</div><div class="stat-description">Majority list bachelor’s, though half accept alternatives.</div></div>
+        <div class="stat-item"><span class="stat-number">&lt;40%</span><div class="stat-label">Screen by GPA</div><div class="stat-description">Only 4 in 10 jobs filter on GPA—more inclusive hiring.</div></div>
+        <div class="stat-item"><span class="stat-number">5×</span><div class="stat-label">Virtual Engagement</div><div class="stat-description">Virtual events see 5× engagement over pre‑pandemic.</div></div>
+      </div>
+      <!-- Student Engagement -->
+      <div class="section">
+        <div class="section-title"><span class="section-icon">👥</span>Student Engagement</div>
+        <div class="stat-item"><span class="stat-number">8</span><div class="stat-label">Touches to Apply</div><div class="stat-description">Multi-touch campaigns key to conversion.</div></div>
+        <div class="stat-item"><span class="stat-number">80%</span><div class="stat-label">First‑Year Engagement</div><div class="stat-description">Targeted outreach boosted CMU first‑year usage from 27% to 80%.</div></div>
+        <div class="stat-item"><span class="stat-number">90%</span><div class="stat-label">Fair RSVPs via Campaigns</div><div class="stat-description">Targeted messages outperform mass emails.</div></div>
+        <div class="stat-item"><span class="stat-number">50%+</span><div class="stat-label">Follow-Up Rate</div><div class="stat-description">Half of attendees receive recruiter follow‑up within 48 hrs.</div></div>
+      </div>
+      <!-- Employer Scale & Partnerships -->
+      <div class="section">
+        <div class="section-title"><span class="section-icon">🏢</span>Employer Partnerships</div>
+        <div class="stat-item"><span class="stat-number">500</span><div class="stat-label">Interns/Season (Medtronic)</div><div class="stat-description">+25% growth; expanded roles & on‑ramps for freshmen.</div></div>
+        <div class="stat-item"><span class="stat-number">200+100</span><div class="stat-label">National Grid Intake</div><div class="stat-description">Annual interns + grad hires in the U.S.</div></div>
+        <div class="stat-item"><Span class="stat-number">9K+</span><div class="stat-label">Tracked Outreach Emails</div><div class="stat-description">Personalized emails auto‑logged via BCC tracking.</div></div>
+        <div class="stat-item"><span class="stat-number">70+</span><div class="stat-label">Blackstone Portfolio Firms</div><div class="stat-description">Advised on systematic early‑talent hiring initiatives.</div></div>
+      </div>
+      <!-- Collections Strategy & Implementation -->
+      <div class="section">
+        <div class="section-title"><span class="section-icon">📚</span>Collections Strategy</div>
+        <div class="stat-item"><span class="stat-number">60</span><div class="stat-label">Pathway Collections</div><div class="stat-description">60 collections aligned to academic pathways at Salt Lake CC.</div></div>
+        <div class="stat-item"><span class="stat-number">90%</span><div class="stat-label">Manual Work Reduction</div><div class="stat-description">Labels auto‑populate collections, cutting maintenance by 90%.</div></div>
+        <div class="stat-item"><span class="stat-number">Multi‑Modal</span><div class="stat-label">Promotion Strategies</div><div class="stat-description">Digital & physical flyers, social, newsletters drive awareness.</div></div>
+        <div class="stat-item"><span class="stat-number">Following</span><div class="stat-label">Student Collection Following</div><div class="stat-description">Upcoming feature: alerts & real‑time updates for students.</div></div>
+      </div>
+    </div>
+
+    <!-- Deep Dive: Collections Strategy -->
+    <div class="key-insights-section">
+      <h2>Deep Dive: Collections Strategy</h2>
+      <div class="insights-grid">
+        <div class="insight-item"><h3>Purpose & Benefits</h3><p>Curated collections connect students to relevant roles—700% ↑ in applications vs. standalone postings.</p></div>
+        <div class="insight-item"><h3>Upcoming Features</h3><p>Student following, feed & event integration, and analytics dashboards for monitoring views, saves, and applications.</p></div>
+        <div class="insight-item"><h3>Panel Highlights</h3><p>UW‑Madison’s collaborative category approach, Salt Lake CC’s pathway-based collections, and Syracuse’s event‑integrated labels for automation.</p></div>
+        <div class="insight-item"><h3>Promotion & Feedback</h3><p>Physical flyers, social campaigns, and student newsletters drove awareness; analytics and informal feedback guide refinements.</p></div>
+        <div class="insight-item"><h3>Challenges & Safeguards</h3><p>Supplement collections with job agents & saved searches to surface roles outside collections and avoid missed opportunities.</p></div>
+        <div class="insight-item"><h3>Next Steps</h3><p>Scale pathway collections, integrate alerts, refine via analytics, and expand cross-department collaboration.</p></div>
+      </div>
+    </div>
+
+    <!-- Actionable Recommendations -->
+    <div class="action-insights">
+      <h2>Actionable Recommendations</h2>
+      <div class="action-grid">
+        <div class="action-item"><h3>Scale Internships</h3><p>Increase summer intern capacity by 25% to maximize conversion ROI.</p></div>
+        <div class="action-item"><h3>Launch Collections</h3><p>Implement curated collections across academic pathways and promote via multi‑channel campaigns.</p></div>
+        <div class="action-item"><h3>Enable Alerts</h3><p>Activate student following when available and integrate with feed notifications.</p></div>
+        <div class="action-item"><h3>Optimize Multi‑Touch</h3><p>Map 8 touch points for application campaigns and personalize engagement sequences.</p></div>
+        <div class="action-item"><h3>Partner with SMBs</h3><p>Leverage the 35M SMB network for diverse internship pipelines and negotiate efficient hiring partnerships.</p></div>
+        <div class="action-item"><h3>Strengthen Analytics</h3><p>Use dashboards to monitor opens, views, and applications; iterate strategies based on data and student feedback.</p></div>
+      </div>
+    </div>
+
+    <!-- Benchmark Section -->
+    <div class="benchmark-section">
+      <h2>Key Benchmarks</h2>
+      <div class="benchmark-grid">
+        <div class="benchmark-item"><div class="benchmark-number">65%</div><div class="benchmark-label">Intern→Full‑Time Conv.</div><div class="benchmark-description">Top ROI channel at leading employers.</div></div>
+        <div class="benchmark-item"><div class="benchmark-number">700%</div><div class="benchmark-label">Collections Multiplier</div><div class="benchmark-description">Application increase for curated roles.</div></div>
+        <div class="benchmark-item"><div class="benchmark-number">4×</div><div class="benchmark-label">SMB App Growth</div><div class="benchmark-description">Quadrupled SMB applications (’22–’25).</div></div>
+        <div class="benchmark-item"><div class="benchmark-number">5×</div><div class="benchmark-label">Virtual Engagement</div><div class="benchmark-description">Engagement lift vs. pre‑pandemic.</div></div>
+      </div>
+    </div>
+
+    <!-- Methodology Section -->
+    <div class="methodology-section">
+      <h2>Methodology & Data Sources</h2>
+      <p>Data aggregated from Handshake platform metrics (Q1–Q2 2025), employer surveys (n≈500), student polls (n≈1,000), and transcripted sessions across 20 panels.</p>
+      <p>Statistics reflect U.S. early‑career hiring patterns, SMB & Fortune 1000 employer usage, and multi‑institution case studies.</p>
+      <p>Future updates will incorporate live collection analytics and ongoing student feedback loops.</p>
+    </div>
+  </div>
+</body>
+</html>
